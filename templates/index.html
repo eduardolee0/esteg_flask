@@ -1,18 +1,20 @@
 {% extends 'base.html' %}
 
-{% block header %}
-    <h1>Esteganografia</h1>
-{% endblock %}
-
 {% block content %}
-    <div class="opcoes">
-        <div class="codificar">
-            <a href="/codificar">
+    <div class="options">
+        <div class="encode">
+            <a href="/encode">
                 <button>
                     Codificar Mensagem
                 </button>
             </a>
         </div>
-        <div class="decodificar"></div>
+            <a href="/decode">
+                <button>
+                    Decodificar mensagem
+                </button>
+            </a>
+        </div>
+        <div class="decode"></div>
     </div>
 {% endblock %}
