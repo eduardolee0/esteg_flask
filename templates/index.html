@@ -1,20 +1,35 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="info">
+        <p>
+            Aplicativo para ocultação e revelação de mensagens
+            escondidas em imagens.
+        </p>
+        <p>
+            escolha a opção desejada:
+        </p>
+    </div>
     <div class="options">
         <div class="encode">
-            <a href="/encode">
-                <button>
+            <a href="/encode" class="options-link">
+                <span class="material-symbols-outlined">
+                    upload_file
+                </span>
+                <span class="options-label">
                     Codificar Mensagem
-                </button>
+                </span>
             </a>
         </div>
-            <a href="/decode">
-                <button>
-                    Decodificar mensagem
-                </button>
+        <div class="decode">
+            <a href="/decode" class="options-link">
+                <span class="material-symbols-outlined">
+                    sim_card_download
+                </span>
+                <span class="options-label">
+                    Decodficar Mensagem
+                </span>
             </a>
         </div>
-        <div class="decode"></div>
     </div>
 {% endblock %}

@@ -2,10 +2,10 @@
 
 {% block content %}
     <div class="title">
-        <h2>Decodficar Mensagem</h2>
+        <h2>Decodificar Mensagem</h2>
     </div>
 
-    <div class="form" id="deocde-forme">
+    <div class="form" id="decode-form">
         <form action="/decode" method="post" enctype="multipart/form-data">
             <label for="image">Escolha a imagem (PNG):</label>
             <input type="file" name="image" accept="image/png" required>
@@ -15,9 +15,9 @@
 
     <div class="spinner" id="loading-spinner"></div>
 
-    <div class="decode_message">
+    <div class="decoded_message" id="result">
         {% if message %}
-            <h2> mensagem oculta:</h2>
+            <h2>Mensagem Oculta:</h2>
             <p>{{ message }}</p>
         {% endif %}
     </div>

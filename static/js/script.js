@@ -1,10 +1,10 @@
-// Função para mostar o spinner enquanto o formulário está sendo enviado
+// Função para mostrar o spinner equanto o formulário está sendo enviado
 document.getElementById('decode-form').addEventListener('submit',
     function() {
-        //mostra o spinner
+        // Mostrar spinner
         document.getElementById('loading-spinner').style.display = 'block';
 
-        //Esconde o resultado
+        //Esconder resultado
         document.getElementById('result').style.display = 'none';
     }
 )

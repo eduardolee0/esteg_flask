@@ -31,28 +31,28 @@ def hide_message(message, image):
     return encoded
 
 def reveal_message(image):
-    binary_massage = ''
+    binary_message = ''
     pixels = image.load()
     width, height = image.size
 
     for y in range(height):
         for x in range(width):
             pixel = list(pixels[x, y])
-            for i in range (3): #extrair os 3 primeiros valores RGB do pixel
-                binary_massage += str(pixel[i] & 1)
+            for i in range(3): # Extrair os 3 primeiros valores RGB do pixel
+                binary_message += str(pixel[i] & 1)
 
     # Verificar o fim da mensagem com o terminador (1111111111111110)
     terminator = '1111111111111110'
-    index_of_terminator = binary_massage.find(terminator)
+    index_of_terminator = binary_message.find(terminator)
 
     # Se o terminador for encontrado, cortar a mensagem
     if index_of_terminator != -1:
-        binary_massage = binary_massage[:index_of_terminator]
+        binary_message = binary_message[:index_of_terminator]
 
     # Converter de binário para texto
     decoded_message = ''
-    for i in range(0, len(binary_massage), 8):
-        byte = binary_massage[i:i +8]
+    for i in range(0, len(binary_message), 8):
+        byte = binary_message[i:i + 8]
         decoded_message += chr(int(byte, 2))
 
     return decoded_message
